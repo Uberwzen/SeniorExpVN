@@ -2,23 +2,31 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
 define Violet = Character("Violet")
 define Unknown = Character("???")
 define Vincent = Character("Vincent")
 define Teacher = Character("Teacher")
-define narrator = Character(None, italics = True)
+define narrator = Character(None, what_italic=True)
 define Student1 = Character("Student #1")
 define Student2 = Character("Student #2")
+define Sophia = Character("Sophia")
 
-image vpic = im.Scale("violet.png", 700, 700)
-image bgroom = im.Scale("room.jpg", 1280, 720)
-image bgclassroom = im.Scale("classroom.png", 1280, 720)
+
+
+image vpic = im.Scale("violet.png", 350, 600)
+image teacher = "teacher.png"
+image sophia = im.Scale("sophia.png", 350, 600)
+image vpicFlip = im.Flip(im.Scale("violet.png", 350, 600), horizontal = True)
+image student1 = im.Scale("schoolboy.png", 350, 600)
+image student2 = im.Scale("schoolgirl.png", 350, 600)
+image bgroom = "bgroom.png"
+image bgclassroom = "bgclassroom.jpg"
+image bgcourtyard = im.Scale("bgcourtyard.jpg", 1280, 720)
+image bgroad = "road.jpg"
+
 
 label start:
     call scene1
-    call scene2
-    call credits
     return
 
 
@@ -51,9 +59,6 @@ label scene1:
     Violet "OW!"
     "Yup, that was Vincent’s voice, and unfortunately, his hand as well. Across the back of Violet’s head."
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
     scene bgroom
     show vpic at left
     show vincent at right
@@ -129,6 +134,9 @@ label scene1:
     Violet "Sure."
 
     stop sound fadeout 1.0
+    call scene2
+    return
+
 
 label scene2:
     scene bgclassroom with fade
@@ -175,7 +183,7 @@ label scene2:
     Student1 "What? I’m not saying anything wrong."
 
     hide student2
-    show vpic at right
+    show vpicFlip at right
     "(The class starts speaking louder amongst themselves)"
     Violet "{i}We always have to have one smartass huh. I’m sure he thinks he’s real clever.{\i}"
     "Violet figured out a while ago that the best way to cope was to hate these types of people. They probably thought they were so much better than everyone else, speaking out."
@@ -193,6 +201,167 @@ label scene2:
     Teacher "Young man, I’ll speak with you after class."
     Violet "{i}There you are. Godspeed, dipshit.{\i}"
     stop sound fadeout 1.0
+    call scene3
+    return
+
+
+label scene3:
+    scene bgcourtyard with fade
+    play music april fadein 1.0
+    show vpic
+    "Violet sat on a bench outside his school, watching as his classmates exited the gates and into their lives outside of school."
+    "They were all required to wear uniforms, which sometimes made Violet forget that each of his classmates lead lives different from his own."
+    "Well, probably not. He felt like everyone has his same worries, same minimal aspirations, desires to just make it through life safety, etc."
+    "But maybe that girl over there was into some boyband that he’s never heard of. Maybe that guy walking with his friends plays piano in his spare time."
+    "Maybe the girl walking towards him, Sophia, shared some of his own hobbies and interests."
+    "It made Violet oddly happy to think about what his classmates looked forward to in their personal lives."
+    show vpic at left
+    show sophia at right
+    Sophia "Enjoying the warm weather?"
+    Violet "Yeah. I’m not in any rush to get home, so I just thought I’d stay here for a while."
+    Sophia "Well, I’m probably gonna head out now. Wanna join me?"
+    Violet "Alright, sure."
+    scene road with fade
+    show vpic at left
+    show sophia at right
+    Sophia "How was physics? I thought it was pretty interes—"
+    Violet "It was pretty boring"
+    Sophia "OH YEAH it was so boring! Math seriously isn’t my thing. Mr. Claudius’s voice seriously just—"
+    Violet "This class goes way too slow. I think I might study math in the future, so this pace is just pretty slow for me."
+    Sophia "So true! I get pretty good grades in math, but uh... I think I just might be a slow learner."
+    Sophia "If you uh... don’t mind... umm..."
+    Violet "Hm?"
+    Sophia "Well... maybe could (whispers) you tutor me someti—"
+    Violet "Whoa, Sophia, you look really red. It’s pretty hot out, did you drink enough water?"
+    Sophia "Oh yeah haha, I think I’m just dehydrated."
+    "Violet takes out some bottled water."
+    Violet "Here, take this."
+    Sophia "Oh, thank you!"
+    "Sophia drinks the entire bottle at an alarming speed."
+    Sophia "Ahem. {i}(takes a deep breath){\i} Hey, Violet?"
+    Violet "Yeah?"
+    Sophia "We’ve been friends for a pretty long time, right?"
+    "Sophia had this determined look on her face. Violet was a little confused."
+    Violet "{i}Did something happen? Was something wrong?"
+    Violet "{i}Well, her expression looked kinda cute, so he didn’t have any complaints.{\i}"
+    Sophia "Okay, so I should feel confident asking. Could you tutor me in physics sometime?"
+    "Sophia’s cheeks were red again. Violet was a little concerned, because that was his last bottle of water."
+    Violet "{i}Oh God, what if she passes out? What was she asking about again? Math tutoring?{\i}"
+    Violet "Uh... yeah sure."
+    Sophia "Really?"
+
+    "Sophia sounded excited."
+    Violet "I mean, yeah. I don’t see why not."
+    Violet "We hang out a lot anyway, right? I don’t mind helping a friend out."
+    Sophia "(coughs) a friend..."
+    "..."
+    Violet "Hm, it sure is beautiful out, huh?"
+    Sophia "Yeah. (sighs) Your eyes really shine in this sunlight..."
+    "..."
+    Violet "Hey, thanks. No one’s ever said that to me before."
+    Sophia "(quiet) boys are actually fucking stupid."
+    Violet "Huh?"
+    Sophia "Huh?"
+    Violet "Never mind."
+
+    play music missionimpossible fadein 1.0
+    "Suddenly, they hear gunshots. Then yelling. That first yell was a man, possibly a middle-aged adult."
+    "Then they heard more shouting."
+    "These shouts sounded angry, but Violet could hear that familiar tone of fear buried within their voices."
+    "Maybe it was more accurate to say that they were screaming."
+    "More gunshots."
+    "Violet didn’t understand why the resistance couldn’t just fight back a little quieter."
+    "He often laid awake at night, reminded of the way that he could hear very little courage in these yells."
+    "Maybe yelling was cathartic? Violet wished that their only hope could at least sound a little braver..."
+    "The shouting grew closer. The gunshot grew closer."
+    "The piercing sound of magazines being emptied made it impossible for Violet to think straight."
+    "There’s always a window of time. At the moment, they were safe from being hit in the crossfire."
+    "But this wouldn’t last long. Once they miss that window, it’s near-impossible to escape."
+    "He’s lost enough classmates to know this. Violet knows that he should run away, and yet—"
+
+    Sophia "Violet, we have to go."
+    "Violet couldn’t feel his legs. He’s been in this situation too many times, and it’s always the same."
+    "Many will default on running away between their instinct of fight or flight."
+    "Very few give into their idiotic impulse to fight. In Violet’s case..."
+
+    menu:
+        "he needed to protect Sophia, even if it meant his death.":
+            Violet "Sophia, run."
+            Sophia "WHAT? Violet: Just run!"
+            hide sophia
+            "Violet sprinted towards the gunfire as it got louder and louder in his ears."
+            "He could feel his head throbbing. Why did he choose this?"
+            "Was Sophia actually any safer? Maybe she’s in even more danger."
+            "Violet saw about six men sprinting across the street. He heard a lot more voices than what would belong to six people."
+            "What was going on? He heard yelling from all around him."
+            "Violet turned around and saw a man in a military uniform pointing a gun at him."
+            Violet "Wait, I’m not—"
+            scene black
+            "Violet collapsed before he heard the bang. Everything went black."
+            call credits
+            return
+
+        "he couldn’t help but freeze up":
+            Sophia "VIOLET!"
+            Violet "Hmm?"
+            Sophia "WE HAVE TO GO!"
+            Violet "I’m sorry?"
+            "Violet could hear his own heartbeat, almost as loud as the gunshots."
+            Sophia "Good lord—"
+            "Sophia grabbed Violet’s hand and sprinted into an alleyway."
+            "They made frequent turns into alleyways and streets that Violet didn’t recognize."
+            "He didn’t recognize them, but he wasn’t too nervous."
+            "Sophia seemed confident enough in leading him to safety, so he trusted her with his life."
+            "They reached a street that Violet vaguely recognized."
+            "Everything on this street was run down and abandoned, which ironically, made it the safest."
+            "Sophia led the two into what used to be a convenience store. They stopped to catch their breath."
+            "Violet had no idea how long they were running for."
+            Sophia "Hey... are... you... oh god my sides hurt... Violet: I’m... ugh..."
+            "They took a few minutes to learn how to breathe normally again."
+            "Violet could still hear the rhythmic thump of his heartbeat. This convenience store was too dark."
+            "The shelves were scarcely stocked and all the items were probably expired. There was a back door that made him a little nervous."
+            Sophia "Hey, you’re still breathing pretty heavily. Are you...?"
+            Violet "I don’t... know..."
+            Sophia "Hey listen, trust me. We’re 100\% okay now. You’re safe, please trust me."
+            "Violet took some deep breaths. After a moment, his breathing returned to the realm of normal."
+            play music april fadein 1.0
+            Sophia "Violet, are you okay?"
+            Violet "I... uh, yeah. I think so. I am."
+            "A few moments of silence passed."
+            Sophia "I... never know what to say when this happens. I’m sorry."
+            Violet "Why are you sorry?"
+            Sophia "I don’t know..."
+            Violet "It’s them who should fucking apologize."
+            Sophia "Violet..."
+            Violet "God fucking dammit. I remember just earlier when I was telling you that I want to study math after high school."
+            Violet "I told you that, but it’s so hard to just want things that are in the miserable fucking future!"
+            Violet "I look into the past and it’s painful, and I look into the future and it’s so damn bleak."
+            Sophia "I—"
+            Violet "How can our teachers expect us to take standardized tests and be good at school sports and work towards a career?"
+            Violet "How are we expected to focus on our future when it feels like the world is an absolutely shit place to be?"
+            Violet "Oh yeah, I’ll make goals for a future that I have little to no hope for."
+            Sophia "Violet, take it easy. Slow down. We’re okay."
+            "..."
+            Violet "{i}(quietly){\i} Sophia?"
+            Sophia "Yeah?"
+            Violet "I’m not crazy for having these feelings, right? I’m not weaker than everyone else?"
+            Sophia "You’re not. You’re definitely not."
+            Violet "Okay... okay good..."
+            Sophia "It’s fucked up. That’s all. You’re right about everything."
+            "..."
+            Sophia "Just... one day at a time. We’ll take it step by step together. That’s all I can really say."
+            "..."
+            Violet "Thank you..."
+            "..."
+            Sophia "Can I walk you home?"
+            Violet "Please. Thank you."
+
+            call scene4
+            return
+
+label scene4:
+    call credits
+    return
 
 label credits:
     play music konosuba fadein 1.0
@@ -223,6 +392,8 @@ label credits:
     with Pause(4)
     hide thanks
     with dissolve
+
+    stop sound fadeout 1.0
     return
 
 
