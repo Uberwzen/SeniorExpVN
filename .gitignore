@@ -3,6 +3,10 @@
 .AppleDouble
 .LSOverride
 
+gui.rpy
+options.rpy
+screens.rpy
+
 # Windows-related files
 Thumbs.db
 Thumbs.db:encryptable
@@ -23,6 +27,8 @@ saves
 tmp
 cache
 env
+gui
+tl
 
 log.txt
 errors.txt
