@@ -138,8 +138,7 @@ label scene1:
             $ library = False
 
     stop music fadeout 3.0
-    # TODO: change
-    play sound bell volume 10.0
+    play sound bell
     Vincent "Alright, talk soon?"
     Violet "Yeah, I’ll see you later..."
 
@@ -265,11 +264,11 @@ label scene3:
     "Did something happen? Is something wrong?"
     "Well, her expression is kinda cute, so he doesn’t have any complaints."
     Sophia "Okay, so I should feel confident asking. Could you tutor me in physics sometime?"
-    "Sophia’s cheeks were red again. Violet was a little concerned, because that was his last bottle of water."
+    "Sophia’s cheeks are red again. Violet was a little concerned, because that was his last bottle of water."
     Violet "{i}Oh God, what if she passes out? What was she asking about again? Math tutoring?{\i}"
     Violet "Uh... yeah sure."
     Sophia "Really?"
-    "Sophia sounded excited."
+    "Sophia sounds excited."
     Violet "I mean, yeah. I don’t see why not."
     Violet "We hang out a lot anyway, right? I don’t mind helping a friend out."
     Sophia "{i}(coughs){\i} a friend..."
@@ -351,7 +350,7 @@ label scene3:
             Sophia "Hey listen, trust me. We’re 100\% okay now. There’s absolutely no one here, and nothing is gonna happen to us."
             "Violet takes some deep breaths. After a moment, his breathing returns to normal."
 
-            play music satie fadein 3.0
+            play music satie fadein 3.0 volume 3.0
             Sophia "Violet, are you okay?"
             Violet "I... uh, yeah. I think so. I am."
             "A few moments of silence passed."
@@ -483,7 +482,6 @@ label scene5:
 
     show vpic
     "Violet tries to see the positive in being forced to walk everywhere, since he otherwise wouldn’t have the opportunity to slow down and notice the smaller details of his town."
-    "That said, the streets definitely weren’t the safest, either. You can’t have it all..."
     "That said, the streets aren’t really the safest either. You can’t have it all..."
     "His town changes too often. His younger self would have a hard time trying to navigate 18-year-old Violet’s roads."
     "Little Violet would eventually realize that whatever store he was looking for had been shut down and replaced by some DLC-sanctioned bullshit."
@@ -519,7 +517,7 @@ label scene5:
     Vincent "Whatever, man. All I’m saying is that I am a man of action, and you are of inaction. I must guide you, young one."
     Violet "You’re actually so dumb."
     Vincent "Violet, Violet, Violet. Women like a calm, collected man. Treat me like you would Sophia for a moment."
-    Violet "HUH??"
+    Violet "HUH??" with vpunch
     Vincent "Actually, forget it. I could never forgive myself if you fell for me."
     Violet "..."
     Violet "Okay."
@@ -568,15 +566,15 @@ label scene5:
     Violet "You’re an... interesting guy. You go from insightful to stupid way too quickly."
     Vincent "Hey, I said something nice so now it’s your turn."
     Violet "You’re... insightful from time to time."
+    "..."
     Vincent "See, you bully me like this yet choose to hang out with me. Speaking of which, I want to ask you something."
     Vincent "Break is coming up, so do you wanna go camping? Honestly you don’t really seem like the type, but it could be fun."
     Violet "Yeah, honest I think I'd really enjoy that."
     Vincent "That sounded oddly enthusiastic. Am I talking to the real Violet?"
     Violet "Uh, yeah. I don’t know, for some reason I was always into the idea of going camping."
     Unknown "Ah, I remember going camping when I was your age."
-    show mysteryman
     "A middle-aged man browsing the section behind the comics stands turned away from Violet and Vincent, looking through the nonfiction books that filled the shelves."
-    "He reamins turned away as he spoke to the boys."
+    "He remains turned away as he spoke to the boys."
     Unknown "My friends and I visited this forest with an open field that gave a beautiful view of the clear night sky."
     Violet "That sounds wonderful."
     Unknown "It really was. This is the age where you should be going after experiences like these. Enjoy your youth a bit."
@@ -592,6 +590,7 @@ label scene5:
     Vincent "{i}(whispering){\i} Violet, be careful. You don’t know who this is."
     Violet "Alright, fine."
     "The man turns around to face Violet and Vincent."
+    show mysteryman
     Unknown "Don’t worry young man, I share the feeling."
     Unknown "If you think your childhood was ruined by the DLC, then try talking to the people a generation above you."
     Unknown "The war went on for the entirety of my teenage years."
@@ -681,7 +680,7 @@ label credits:
         yanchor 0.5 ypos 0.5
         xanchor 0.5 xpos 0.5
     with dissolve
-    with Pause(5)
+    with Pause(4)
     hide theend
     with dissolve
     with Pause(credits_speed - 5)
@@ -708,7 +707,7 @@ label credits:
         yanchor 0.5 ypos 0.5
         xanchor 0.5 xpos 0.5
     with dissolve
-    with Pause(4)
+    with Pause(8)
     hide thanks
     with dissolve
 
