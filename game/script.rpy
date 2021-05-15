@@ -14,11 +14,11 @@ default library = True
 
 image vpic = im.Scale("violet.png", 300, 600)
 image teacher = "teacher.png"
-image sophia = im.Scale("sophia.png", 650, 600)
-image vpicFlip = im.Flip(im.Scale("violet.png", 350, 600), horizontal = True)
+image sophia = im.Scale("sophia.png", 300, 600)
+image vpicFlip = im.Flip(im.Scale("violet.png", 300, 600), horizontal = True)
 image student1 = im.Scale("schoolboy.png", 350, 600)
 image student2 = im.Scale("schoolgirl.png", 350, 600)
-image vincent = im.Scale("vincent.png", 450, 600)
+image vincent = im.Scale("vincent.png", 400, 600)
 image mysteryman = im.Scale("mysteryman.png", 450, 450)
 image bgroom = "bgroom.png"
 image bgclassroom = "bgclassroom.jpg"
@@ -26,6 +26,7 @@ image bgcourtyard = im.Scale("bgcourtyard.jpg", 1280, 720)
 image bgroad = "road.jpg"
 image bgdesk = im.Scale("desk.jpg", 1280, 720)
 image bgbookstore = im.Scale("bookstore.png", 1280, 720)
+image explosion = "explosion.png"
 
 transform halfleft:
     xalign 0.15 yalign 1.0
@@ -297,6 +298,7 @@ label scene3:
     Violet "Never mind."
 
     play music missionimpossible fadein 3.0
+    play sound gunshot3 volume 0.2
     "Suddenly, they hear gunshots. Then yelling. That first yell was a man, possibly a middle-aged adult."
     "Then they hear more people shouting."
     "These shouts sound angry, but Violet could hear that familiar tone of fear buried within their voices."
@@ -307,35 +309,60 @@ label scene3:
     "Maybe yelling is cathartic for them? Violet just wished that their only hope could at least sound a little braver..."
     "The shouting and gunshots grow noticeably closer."
     "The piercing sound of magazines being emptied makes it impossible for Violet to think straight."
+    stop sound
+    play sound gunshot1
     "There’s always a window of time. At the moment, Violet and Sophia are safe from being hit in the crossfire."
     "But this won’t last long. Once they miss that window, it’s near-impossible to escape."
     "Violet has lost enough classmates to know this. He knows that he should run away, and yet—"
-
     Sophia "Violet, we have to go."
     "Violet can’t feel his legs. Just like everyone else, he’s been in this situation too many times."
     "The vast majority will default on running away between their instinct of fight or flight."
     "In the past, he has too. But this time, it was different. This time..."
 
     menu:
-        "he needed to protect Sophia, even if it meant his death.":
+        "Violet feels an unexplainable urge to run towards the gunfire.":
+            "He couldn’t explain this urge, not even remotely to himself."
+            "Maybe it’s like one of those feelings you get when you stand on a tall building and feel a strange urge to throw something valuable off the top?"
+            "The urge to just do the most destructive thing in that moment?"
+            "No, it’s definitely something more than that."
+            "Violet is angry."
+            "He’s angry that it’s been ingrained in him and his friends that gunshots mean running."
+            "That compliance means safety."
+            "That to make yourself seen is to put yourself in danger."
+            "He wants to run towards the gunfire because he knows that his reality wants him to do the opposite."
+            "And he’s damn tired of staying in his lane."
             Violet "Sophia, run."
-            Sophia "WHAT? Violet: Just run!"
+            "Violet is angry."
+            Sophia "WHAT?"
+            "He can’t take it anymore."
+            Violet "Just run!"
             hide sophia
-            "Violet sprinted towards the gunfire as it got louder and louder in his ears."
-            "He could feel his head throbbing. Why did he choose this?"
-            "Was Sophia actually any safer? Maybe she’s in even more danger."
-            "Violet saw about six men sprinting across the street. He heard a lot more voices than what would belong to six people."
-            "What was going on? He heard yelling from all around him."
-            "Violet turned around and saw a man in a military uniform pointing a gun at him."
+            play sound gunshot1
+            "Violet sprints towards the gunfire as it gets louder and louder in his ears. He could feel the sides of his head throbbing."
+            "He didn’t know where he was. Violet recognizes his surroundings but he couldn’t think straight enough to navigate these roads."
+            "He stops for a moment to catch his breath, but he realizes that he can’t breathe any slower."
+            Violet "Oh, God. I’m hyperventilating."
+            "Why did he do this again? Was Sophia doing okay? How did he get here?"
+            "Violet sees about six men with guns sprinting across the street, away from something."
+            "He hears a lot more voices than what would belong to six people. Violet couldn’t tell where those voices were coming from."
+            "His feet are planted on the ground and refuse to move."
+            Violet "Fuck, this was a mistake."
+            "Violet turns around and sees a man in a DLC military uniform pointing a gun at him."
             Violet "Wait, I’m not—"
             scene black
-            "Violet collapsed before he heard the bang. Everything went black."
+            play sound gunshot2
+            "Violet collapses before he hears the bang."
+            "Everything goes black."
+            "..."
+
+            stop music fadeout 3.0
             with Pause(3)
             jump credits
 
-        "he couldn’t help but freeze up.":
+        "Violet can’t help but freeze up.":
             Sophia "VIOLET!"
             Violet "Hmm?"
+            play sound gunshot1
             Sophia "WE HAVE TO GO!"
             Violet "I’m sorry?"
             "Violet can hear his own heartbeat, almost as loud as the gunshots."
@@ -649,7 +676,7 @@ label scene5:
     menu:
         "Join.":
             Vincent "Dude..."
-            Unknown "Welcome aboard. I can’t promise you’ll come out the other side in one piece. We do what we can."
+            "Resistance Member" "Welcome aboard. I can’t promise you’ll come out the other side in one piece. We do what we can."
             Violet "I’ll do what I can..."
             hide mysteryman
             Violet "Feeling like I have some control over my life is worth the risk. This is gonna be alright. I’ll be alright."
@@ -667,7 +694,7 @@ label scene5:
             Vincent "It’s definitely a hard decision, but I’ll respect any decision you make."
             Vincent "Things are rough, but we’ll get through it together."
             Violet "Okay, that sounds okay."
-            Unknown "Fair enough. Zero recruits out of five that I’ve asked. Fair enough."
+            "Resistance Member" "Fair enough. Zero recruits out of five that I’ve asked. Fair enough."
             hide mysteryman
             Violet "Vincent, I’m not a coward, right?"
             Vincent "Turning down this offer doesn’t make you a coward, and if you had accepted, that doesn’t change who you are either."
@@ -688,14 +715,14 @@ label credits:
     image cred = Text(credits_s, text_align=0.5)
     image theend = Text("{size=80}The End", text_align=0.5)
     image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5)
-    $ credits_speed = 40 #scrolling speed in seconds
-    scene black #replace this with a fancy background
+    $ credits_speed = 50 #scrolling speed in seconds
+    scene black
     show cred at Move((0.5, 5.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
     show theend:
         yanchor 0.5 ypos 0.5
         xanchor 0.5 xpos 0.5
     with dissolve
-    with Pause(4)
+    with Pause(6)
     hide theend
     with dissolve
     with Pause(credits_speed - 5)
@@ -732,7 +759,7 @@ label credits:
 
 init python:
     credits = ('Writing', 'Nithya Sastry'), ('Art', 'Felicia Quan'), ('Programming', 'Matthew Ding'), ('Programming', 'Jason Liang'), ('Programming', 'William Zeng')
-    credits_s = "{size=80}Capstone Project 2021\n\n"
+    credits_s = "{size=80}Dreaming of a Violet Sunset\n\n"
     c1 = ''
     for c in credits:
         if not c1==c[0]:

@@ -30,7 +30,9 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
-A visual novel created by five Westford Academy students. Completed for the Spring 2021 Senior Experience.
+In a futuristic world, follow Violet as he, beset by doubt and uncertainty, navigates a day in his life.
+
+A visual novel created by five Westford Academy students. Completed as part of the Spring 2021 Senior Experience.
 """)
 
 
