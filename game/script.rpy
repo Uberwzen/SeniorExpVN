@@ -12,9 +12,9 @@ define Student2 = Character("Student #2", who_color="1DFF00")
 define Sophia = Character("Sophia", who_color="FFC2FF")
 default library = True
 
-image vpic = im.Scale("violet.png", 350, 600)
+image vpic = im.Scale("violet.png", 300, 600)
 image teacher = "teacher.png"
-image sophia = im.Scale("sophia.png", 350, 600)
+image sophia = im.Scale("sophia.png", 650, 600)
 image vpicFlip = im.Flip(im.Scale("violet.png", 350, 600), horizontal = True)
 image student1 = im.Scale("schoolboy.png", 350, 600)
 image student2 = im.Scale("schoolgirl.png", 350, 600)
@@ -32,6 +32,20 @@ transform halfleft:
 
 transform halfright:
     xalign 0.85 yalign 1.0
+
+
+# presplash loading screen
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    show text "Feel Feels Production presents..." with dissolve
+    with Pause(2)
+
+    hide text with dissolve
+    with Pause(1)
+
+    return
 
 
 label start:
@@ -101,7 +115,7 @@ label scene1:
             Vincent "Well I admire your confidence, good sir."
 
     Violet "You’re actually stupid."
-    Vincent "Maybe. Did you see that new episode of {i}To the Moon and Back{\i}?"
+    Vincent "Maybe. Did you see that new episode of {i}To the Moon and Back{/i}?"
     Violet "Yeah, I did! Let’s talk about it later because I need at least an hour."
     Vincent "So I’m guessing you liked it then?"
     Violet "Of course!"
@@ -112,7 +126,7 @@ label scene1:
     Vincent "At least it’s funny to read about the stuff they argued about."
     Violet "I feel like they still had it better back then..."
     Vincent "Hey, man. Just let me cope."
-    Violet "{i}(sighs){\i} Well, I guess there’s nothing wrong with that... coping..."
+    Violet "{i}(sighs){/i} Well, I guess there’s nothing wrong with that... coping..."
     Vincent "Hey, don’t sound so gloomy."
     Violet "..."
     "Violet curses himself. He felt like he always ruines the mood of conversations with his own dark mood."
@@ -158,18 +172,18 @@ label scene2:
     show teacher at halfright
     Teacher "Alright class, today we’ll be studying the Pre-War Era."
     Teacher "You all did the reading last night, so we’ll just be going over that today."
-    Violet "{i}God, if you’re real, just put me in a coma.{\i}"
+    Violet "{i}God, if you’re real, just put me in a coma.{/i}"
     Teacher "Now, as we know, before the War, poverty was rampant across our nation."
     Teacher "But through our government’s expansion of global influence and the creation of protectorates, global trade has increased in efficiency by more than ten-fold."
     Teacher "Poverty has been cut to historic-low levels due to our increased wealth and power. Our Department of Life and Charity has overseen all of this great work over the past fifty years."
-    Violet "{i}Why do we even need to learn about this? Seriously, if I have to hear the word “poverty” one more time, I’m gonna kill somebody.{\i}"
-    Violet "{i}Plus, I bet half this shit is DLC propaganda anyways.{\i}"
+    Violet "{i}Why do we even need to learn about this? Seriously, if I have to hear the word “poverty” one more time, I’m gonna kill somebody.{/i}"
+    Violet "{i}Plus, I bet half this shit is DLC propaganda anyways.{/i}"
     Teacher "Can someone tell me what they know about the War? It can be anything, really."
     "(Silence)"
     Teacher "Anyone? Feel free to speak out."
     "(Silence)"
-    Violet "{i}I don’t know what he expects from us. I feel like no matter what I say, it’ll be the wrong thing.{\i}"
-    Violet "{i}You won’t find too many people who are actually excited to talk about this type of stuff.{\i}"
+    Violet "{i}I don’t know what he expects from us. I feel like no matter what I say, it’ll be the wrong thing.{/i}"
+    Violet "{i}You won’t find too many people who are actually excited to talk about this type of stuff.{/i}"
     "..."
     hide vpic
     show student1 at halfleft
@@ -200,10 +214,10 @@ label scene2:
     hide student2
     show vpicFlip at halfright
     "(The class starts speaking louder amongst themselves)"
-    Violet "{i}We always have to have one smartass huh. I’m sure he thinks he’s real clever.{\i}"
+    Violet "{i}We always have to have one smartass huh. I’m sure he thinks he’s real clever.{/i}"
     "Violet figured out a while ago that the best way to cope was to hate these types of people. They probably thought they were so much better than everyone else, speaking out as they do."
     "Little did they know that everyone shared their basic-ass opinions."
-    Violet "{i}Arrogant bastard.{\i}"
+    Violet "{i}Arrogant bastard.{/i}"
     "Even though Violet doesn’t speak a word of what he was thinking, he feels guilty for a brief moment."
     "Unfortunately, he notices that feeling. He pushes the uncomfortable feeling to the side, trying to forget about it."
     "There's an uncomfortable cognitive dissonance that comes from hating someone that you completely agree with..."
@@ -212,9 +226,9 @@ label scene2:
     hide student1
     show teacher at halfleft
     Teacher "Class, settle down."
-    Violet "{i}At least after today, he’ll learn how to hold his tongue. And as expected, it always ends in...{\i}"
+    Violet "{i}At least after today, he’ll learn how to hold his tongue. And as expected, it always ends in...{/i}"
     Teacher "Young man, I’ll speak with you after class."
-    Violet "{i}There you go. Godspeed, dipshit.{\i}"
+    Violet "{i}There you go. Godspeed, dipshit.{/i}"
     "Violet tries not to think about what’ll happen to this kid and his family, eventually realizing that he couldn’t even remember his name. They’ve been classmates for two to three years."
     "Oh, well."
     stop music fadeout 3.0
@@ -249,15 +263,15 @@ label scene3:
     Sophia "So true! I get pretty good grades in math, but uh... I think I just might be a slow learner."
     Sophia "If you uh... don’t mind... umm..."
     Violet "Hm?"
-    Sophia "{i}(quiet) Come on, Sophia. This is the perfect opportunity.{\i}"
-    Sophia "Well... maybe you could {i}(whispers){\i} tutor me someti—"
+    Sophia "{i}(quiet) Come on, Sophia. This is the perfect opportunity.{/i}"
+    Sophia "Well... maybe you could {i}(whispers){/i} tutor me someti—"
     Violet "Whoa, Sophia, you look really red. It’s pretty hot out, did you drink enough water?"
     Sophia "Oh yeah haha, I think I’m just dehydrated."
     "Violet takes out some bottled water."
     Violet "Here, take this."
     Sophia "Oh, thank you!"
     "Sophia drinks the entire bottle at an alarming speed."
-    Sophia "Ahem. {i}(takes a deep breath){\i} Hey, Violet?"
+    Sophia "Ahem. {i}(takes a deep breath){/i} Hey, Violet?"
     Violet "Yeah?"
     Sophia "We’ve been friends for a pretty long time, right?"
     "Sophia has this determined look on her face. Violet was a little confused."
@@ -265,19 +279,19 @@ label scene3:
     "Well, her expression is kinda cute, so he doesn’t have any complaints."
     Sophia "Okay, so I should feel confident asking. Could you tutor me in physics sometime?"
     "Sophia’s cheeks are red again. Violet was a little concerned, because that was his last bottle of water."
-    Violet "{i}Oh God, what if she passes out? What was she asking about again? Math tutoring?{\i}"
+    Violet "{i}Oh God, what if she passes out? What was she asking about again? Math tutoring?{/i}"
     Violet "Uh... yeah sure."
     Sophia "Really?"
     "Sophia sounds excited."
     Violet "I mean, yeah. I don’t see why not."
     Violet "We hang out a lot anyway, right? I don’t mind helping a friend out."
-    Sophia "{i}(coughs){\i} a friend..."
+    Sophia "{i}(coughs){/i} a friend..."
     "..."
     Violet "Hm, it sure is beautiful out, huh?"
-    Sophia "Yeah. {i}(sighs){\i} Your eyes really shine in this sunlight..."
+    Sophia "Yeah. {i}(sighs){/i} Your eyes really shine in this sunlight..."
     "..."
     Violet "Hey, thanks. No one’s ever said that to me before. You’re a really nice friend to me, Sophia."
-    Sophia "{i}(quiet){\i} I’m really shooting my shot for one dense motherfucker."
+    Sophia "{i}(quiet){/i} I’m really shooting my shot for one dense motherfucker."
     Violet "Huh? Did you say something?"
     Sophia "Something?"
     Violet "Never mind."
@@ -332,8 +346,8 @@ label scene3:
             "Sophia seems confident enough in leading him to safety, so he could trust her with his life."
             "I mean, it’s not like he has any other choice."
 
-            Violet "{i}Why am I always the person leaning on someone else...{\i}"
-            Violet "{i}I need to learn to hold my own sometimes...{\i}"
+            Violet "{i}Why am I always the person leaning on someone else...{/i}"
+            Violet "{i}I need to learn to hold my own sometimes...{/i}"
             "They reached a street that Violet vaguely recognizes."
             "Everything on this street is run down and abandoned, which ironically, makes it the safest."
             "Sophia leads the two into what used to be a convenience store so they can stop to catch their breath."
@@ -360,7 +374,7 @@ label scene3:
             Violet "They should be the ones fucking apologizing."
             Sophia "Violet..."
             Violet "God fucking dammit. I remember just earlier when I was telling you that I want to study math after high school."
-            Violet "I told you that, but it’s so hard to just {i}want{\i} things that are in the miserable fucking future!"
+            Violet "I told you that, but it’s so hard to just {i}want{/i} things that are in the miserable fucking future!"
             Violet "I look into the past and it’s painful, and I look into the future and it’s so damn bleak."
             Sophia "I—"
             Violet "How can our teachers expect us to take standardized tests and be good at school sports and work towards a career?"
@@ -369,7 +383,7 @@ label scene3:
             Sophia "Violet, take it easy. Slow down. We’re okay."
             "..."
             "..."
-            Violet "{i}(quietly){\i} Sophia?"
+            Violet "{i}(quietly){/i} Sophia?"
             Sophia "Yeah?"
             Violet "I’m not crazy for having these feelings, right? I’m not weaker than everyone else?"
             Sophia "You’re not. You’re definitely not."
@@ -385,7 +399,7 @@ label scene3:
             Sophia "Can I walk you home?"
             Violet "Yeah. Thanks for everything."
             "..."
-            Violet "{i} She’s really amazing, huh. {\i}"
+            Violet "{i} She’s really amazing, huh. {/i}"
 
             stop music fadeout 3.0
             scene black
@@ -397,10 +411,10 @@ label scene4:
     scene bgdesk with fade
     play music mitsuha fadein 3.0
     "..."
-    Violet "{i}Damn, I told Sophia that I was into math, but that’s just because Vincent told me that girls are into smart guys.{\i}"
-    Violet "{i}And then she asked me to tutor her! Lying is really not the way, huh.{\i}"
+    Violet "{i}Damn, I told Sophia that I was into math, but that’s just because Vincent told me that girls are into smart guys.{/i}"
+    Violet "{i}And then she asked me to tutor her! Lying is really not the way, huh.{/i}"
     Violet "I really just signed myself up for twice the amount of work if I want Sophia to like me back."
-    Violet "{i}Oh fuck, what if I have to study math in college? I’ll actually die...{\i}"
+    Violet "{i}Oh fuck, what if I have to study math in college? I’ll actually die...{/i}"
     "..."
     Violet "Hm..."
     Violet "What the hell is Cantor’s diagonalization? That sounds fake."
@@ -425,35 +439,35 @@ label scene4:
     "..."
     Violet "God, why do I feel so uncomfortable? What exactly is wrong with owning these?"
     Violet "Why would I rather die than have anyone from school see any of this shit?"
-    Violet "{i}This all feels... meaningless. It’s just pathetic. Seriously.{\i}"
-    Violet "{i}I don’t even think I have a future and I’m still worried about my classmates finding out that I have this collection.{\i}"
-    Violet "{i}The future...{\i}"
-    Violet "{i}Life goes by way too fucking fast. I’m really at the crossroads, where I’m just coming out of my childhood and I’m about to enter adult life. This is too much...{\i}"
-    Violet "{i}I’m already eighteen and I feel like I missed out on being a kid. This is fucked.{\i}"
-    Violet "{i}I’m graduating soon and I’m never going to see classmates ever again.{\i}"
-    Violet "{i}These are the people I grew up with, and I feel weirdly attached and distant to them at the same time.{\i}"
-    Violet "{i}They would never know or even really care about my dumb hobbies, so why do I care if they really know me? It’s not like I’ll miss them.{\i}"
-    Violet "{i}If I care so much, then does that mean I’m going to miss them? Why?{\i}"
-    Violet "{i}I guess, in a way, the past is safer even if it wasn’t the greatest. I might actually miss my classmates.{\i}"
-    Violet "{i}I’ll just miss my childhood, honestly.{\i}"
-    Violet "{i}Maybe I’m still holding onto these figurines because I wanna keep being a kid.{\i}"
+    Violet "{i}This all feels... meaningless. It’s just pathetic. Seriously.{/i}"
+    Violet "{i}I don’t even think I have a future and I’m still worried about my classmates finding out that I have this collection.{/i}"
+    Violet "{i}The future...{/i}"
+    Violet "{i}Life goes by way too fucking fast. I’m really at the crossroads, where I’m just coming out of my childhood and I’m about to enter adult life. This is too much...{/i}"
+    Violet "{i}I’m already eighteen and I feel like I missed out on being a kid. This is fucked.{/i}"
+    Violet "{i}I’m graduating soon and I’m never going to see classmates ever again.{/i}"
+    Violet "{i}These are the people I grew up with, and I feel weirdly attached and distant to them at the same time.{/i}"
+    Violet "{i}They would never know or even really care about my dumb hobbies, so why do I care if they really know me? It’s not like I’ll miss them.{/i}"
+    Violet "{i}If I care so much, then does that mean I’m going to miss them? Why?{/i}"
+    Violet "{i}I guess, in a way, the past is safer even if it wasn’t the greatest. I might actually miss my classmates.{/i}"
+    Violet "{i}I’ll just miss my childhood, honestly.{/i}"
+    Violet "{i}Maybe I’m still holding onto these figurines because I wanna keep being a kid.{/i}"
     "..."
-    Violet "{i}I don’t know who these characters are... but for some reason, owning these make me kinda happy...{\i}"
+    Violet "{i}I don’t know who these characters are... but for some reason, owning these make me kinda happy...{/i}"
     "..."
-    Violet "{i}I really don’t know why. These feel so small in the face of everything else.{\i}"
-    Violet "{i}But... maybe that’s why I like these. It’s something that I can actually control.{\i}"
+    Violet "{i}I really don’t know why. These feel so small in the face of everything else.{/i}"
+    Violet "{i}But... maybe that’s why I like these. It’s something that I can actually control.{/i}"
     Violet "God, why am I thinking about this shit?"
-    "{i}Maybe it was the mere fact that his collection makes him happy. It’s small, but it makes him happy.{\i}"
-    "{i}That's really the only reason he needs to hold onto these figurines for as long as possible.{\i}"
-    "Maybe he just needs to stop thinking once in a while and just enjoy what he's got. Forget about the big stuff...{\i}"
-    Violet "{i}When everything seems so big, maybe I just like the fact that I own these small few items that I can hold in the palm of my hand.{\i}"
-    Violet "{i}I think... that’s good enough.{\i}"
-    Violet "{i}I can’t really hold the future in the palm of my hand... haha...{\i}"
+    "{i}Maybe it was the mere fact that his collection makes him happy. It’s small, but it makes him happy.{/i}"
+    "{i}That's really the only reason he needs to hold onto these figurines for as long as possible.{/i}"
+    "{i}Maybe he just needs to stop thinking once in a while and just enjoy what he's got. Forget about the big stuff...{/i}"
+    Violet "{i}When everything seems so big, maybe I just like the fact that I own these small few items that I can hold in the palm of my hand.{/i}"
+    Violet "{i}I think... that’s good enough.{/i}"
+    Violet "{i}I can’t really hold the future in the palm of my hand... haha...{/i}"
     "..."
 
     if library == False:
-        Violet "{i}I’m tired. I’m going to bed. Another day, same as before.{\i}"
-        Violet "{i}I can’t tell if that’s good or bad.{\i}"
+        Violet "{i}I’m tired. I’m going to bed. Another day, same as before.{/i}"
+        Violet "{i}I can’t tell if that’s good or bad.{/i}"
         stop music fadeout 3.0
         scene black
         with Pause(3)
@@ -466,7 +480,7 @@ label scene4:
                 with Pause(3)
                 jump scene5
             "I’m going to bed. There’s no point to any of this.":
-                "{i}Sorry, Vincent. Maybe next time.{\i}"
+                "{i}Sorry, Vincent. Maybe next time.{/i}"
                 stop music fadeout 3.0
                 scene black
                 with Pause(3)
@@ -544,12 +558,12 @@ label scene5:
     Violet "I actually hate you."
     Vincent "You’re a wise man, Violet. Ladies love wisdom."
     Violet "If that’s true, then I feel kinda bad for you."
-    Vincent "Violet, you remind me so much of the protagonist in {i}Under a Sunset{\i}."
+    Vincent "Violet, you remind me so much of the protagonist in {i}Under a Sunset{/i}."
     Violet "Wait, you read that?"
-    Vincent "Wait, {i}you{\i} read that? 'Mr. Too Superior to Read Comics' read a comic?"
+    Vincent "Wait, {i}you{/i} read that? 'Mr. Too Superior to Read Comics' read a comic?"
     Violet "Well, I uh—"
     Vincent "What did you think of the ending?"
-    Violet "Okay, I actually cried. I’m not usually someone who cries at stories, but that one really got me—wait, why did you read a {i}romance{\i} comic?"
+    Violet "Okay, I actually cried. I’m not usually someone who cries at stories, but that one really got me—wait, why did you read a {i}romance{/i} comic?"
     Vincent "I like the author and wanted to see what he could do with romance. He usually stays in the action genre, but switched it up for some reason."
     Violet "Well, I’m glad he did, because he’s a genius. The way he made the moon a symbol of a steady and persistent love was so good."
     Violet "It sounds lame when I say it, but I was so into it. I tear up every time I see the moon in real life now."
@@ -579,7 +593,7 @@ label scene5:
     Violet "That sounds wonderful."
     Unknown "It really was. This is the age where you should be going after experiences like these. Enjoy your youth a bit."
     Violet "Easier said than done."
-    Vincent "Well, we {i}are{\i} going camping. He’s right, we should enjoy our youth a bit more."
+    Vincent "Well, we {i}are{/i} going camping. He’s right, we should enjoy our youth a bit more."
     Violet "Yeah, okay. I think camping will be fun. Sir, what’s this place you went to with your friends?"
     Unknown "Well, unfortunately I believe that entire acre of land was repurposed for a prison."
     Vincent "Awe..."
@@ -587,7 +601,7 @@ label scene5:
     Unknown "Yeah, it was pretty special."
     Violet "Ugh, shit like that makes me hate our government more and more."
     Violet "Sometimes I can get used to it and not care so much, but for some reason small stuff like that makes me angry."
-    Vincent "{i}(whispering){\i} Violet, be careful. You don’t know who this is."
+    Vincent "{i}(whispering){/i} Violet, be careful. You don’t know who this is."
     Violet "Alright, fine."
     "The man turns around to face Violet and Vincent."
     show mysteryman
@@ -603,7 +617,7 @@ label scene5:
     Unknown "Well... all I’m saying is that if you actually want to do something about our current political situation, then I could bring you to the people currently involved in that..."
     Vincent "Are you...?"
     Unknown "Yeah, I’m a part of your unnamed and pitiful resistance force. Pleased to be making your acquaintance."
-    "Resistance Member" "Despite our unfortunate lifestyle, we rest pretty well at night knowing that we’re doing {i}something{\i}. Plus you meet some pretty good people too."
+    "Resistance Member" "Despite our unfortunate lifestyle, we rest pretty well at night knowing that we’re doing {i}something{/i}. Plus you meet some pretty good people too."
     "Resistance Member" "So, are you two interested?"
     Violet "God... this is too sudden..."
     Vincent "Violet, I’m still not sure if we can trust him."
@@ -664,6 +678,7 @@ label scene5:
             Violet "Together."
             "..."
 
+    stop music fadeout 3.0
     with Pause(3)
     jump credits
 
