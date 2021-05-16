@@ -14,7 +14,7 @@ default library = True
 
 image vpic = im.Scale("violet.png", 300, 600)
 image teacher = "teacher.png"
-image sophia = im.Scale("sophia.png", 300, 600)
+image sophia = im.Scale("sophia.png", 325, 625)
 image vpicFlip = im.Flip(im.Scale("violet.png", 300, 600), horizontal = True)
 image student1 = im.Scale("schoolboy.png", 350, 600)
 image student2 = im.Scale("schoolgirl.png", 350, 600)
@@ -131,7 +131,7 @@ label scene1:
     Vincent "Hey, don’t sound so gloomy."
     Violet "..."
     "Violet curses himself. He felt like he always ruines the mood of conversations with his own dark mood."
-    "He at least tried to be a little more cheerful."
+    "He at least tries to be a little more cheerful."
     "And even then, trying is different from actually being successful..."
     Vincent "Got any plans after school?"
     Violet "Never."
@@ -214,7 +214,6 @@ label scene2:
     "(The class starts speaking louder amongst themselves)"
     hide student2
     show vpicFlip at halfright
-    "(The class starts speaking louder amongst themselves)"
     Violet "{i}We always have to have one smartass huh. I’m sure he thinks he’s real clever.{/i}"
     "Violet figured out a while ago that the best way to cope was to hate these types of people. They probably thought they were so much better than everyone else, speaking out as they do."
     "Little did they know that everyone shared their basic-ass opinions."
@@ -244,7 +243,7 @@ label scene3:
     show vpic
     "Violet sits on a bench outside his school, watching as his classmates exit the gates and into their lives outside of school."
     "Violet forget that each of his classmates lead lives different from his own."
-    "Well, probably not too different. Hveryone likely shares Violet’s same worries, same minimal aspirations, desires to just make it through life safety, etc."
+    "Well, probably not too different. Everyone likely shares Violet’s same worries, same minimal aspirations, desires to just make it through life safety, etc."
     "But maybe that girl over there was into some boy band that Violet’s never heard of. Maybe that guy walking with his friends plays piano in his spare time."
     "Maybe the girl walking towards him, Sophia, shared some of his own hobbies and interests."
     "Thinking about what his classmates look forward to in their personal lives makes Violet oddly happy."
@@ -298,7 +297,7 @@ label scene3:
     Violet "Never mind."
 
     play music missionimpossible fadein 3.0
-    play sound gunshot3 volume 0.2
+    play sound gunshot3 volume 0.1
     "Suddenly, they hear gunshots. Then yelling. That first yell was a man, possibly a middle-aged adult."
     "Then they hear more people shouting."
     "These shouts sound angry, but Violet could hear that familiar tone of fear buried within their voices."
@@ -715,7 +714,7 @@ label credits:
     image cred = Text(credits_s, text_align=0.5)
     image theend = Text("{size=80}The End", text_align=0.5)
     image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5)
-    $ credits_speed = 50 #scrolling speed in seconds
+    $ credits_speed = 30 #scrolling speed in seconds
     scene black
     show cred at Move((0.5, 5.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
     show theend:
@@ -752,8 +751,8 @@ label credits:
     with Pause(8)
     hide thanks
     with dissolve
-
-    stop sound fadeout 3.0
+    stop music fadeout 3.0
+    with Pause(3)
     return
 
 

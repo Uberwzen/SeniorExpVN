@@ -4,6 +4,7 @@
 .LSOverride
 
 screens.rpy
+project.json
 
 # Windows-related files
 Thumbs.db
