@@ -12,13 +12,15 @@ define Student2 = Character("Student #2", who_color="1DFF00")
 define Sophia = Character("Sophia", who_color="FFC2FF")
 default library = True
 
-image vpic = im.Scale("violet.png", 300, 600)
+image violet = im.Scale("violet.png", 300, 600)
 image teacher = "teacher.png"
 image sophia = im.Scale("sophia.png", 325, 625)
-image vpicFlip = im.Flip(im.Scale("violet.png", 300, 600), horizontal = True)
+image violetFlip = im.Flip(im.Scale("violet.png", 300, 600), horizontal = True)
 image student1 = im.Scale("schoolboy.png", 350, 600)
 image student2 = im.Scale("schoolgirl.png", 350, 600)
-image vincent = im.Scale("vincent.png", 400, 600)
+image vincent = im.Scale("vincent.png", 300, 600)
+image vincentFlip = im.Flip(im.Scale("vincent.png", 300, 600), horizontal = True)
+
 image mysteryman = im.Scale("mysteryman.png", 450, 450)
 image bgroom = "bgroom.png"
 image bgclassroom = "bgclassroom.jpg"
@@ -79,7 +81,7 @@ label scene1:
     "Yup, that was Vincent’s voice, and unfortunately, his hand as well. Across the back of Violet’s head."
 
     scene bgclassroom
-    show vpic at halfleft
+    show violet at halfleft
     show vincent at halfright
     play music silly fadein 3.0
 
@@ -165,7 +167,7 @@ label scene1:
 label scene2:
     scene bgclassroom with fade
     play music school fadein 3.0
-    show vpic at halfleft
+    show violet at halfleft
     "Violet seriously didn’t have the energy to pay proper attention to class."
     "Luckily, it's history. His teacher makes his students’ lives simultaneously easier and harder by not lecturing on anything that wasn’t on the prior night’s reading."
     "They didn’t really have to pay attention, but they had to last an entire hour in that classroom..."
@@ -186,7 +188,7 @@ label scene2:
     Violet "{i}I don’t know what he expects from us. I feel like no matter what I say, it’ll be the wrong thing.{/i}"
     Violet "{i}You won’t find too many people who are actually excited to talk about this type of stuff.{/i}"
     "..."
-    hide vpic
+    hide violet
     show student1 at halfleft
     Student1 "Can I answer?"
     Teacher "Sure!"
@@ -213,7 +215,7 @@ label scene2:
     Student1 "We’re all just wage slaves for a government that doesn’t give a shit about us."
     "(The class starts speaking louder amongst themselves)"
     hide student2
-    show vpicFlip at halfright
+    show violetFlip at halfright
     Violet "{i}We always have to have one smartass huh. I’m sure he thinks he’s real clever.{/i}"
     "Violet figured out a while ago that the best way to cope was to hate these types of people. They probably thought they were so much better than everyone else, speaking out as they do."
     "Little did they know that everyone shared their basic-ass opinions."
@@ -240,21 +242,21 @@ label scene2:
 label scene3:
     scene bgcourtyard with fade
     play music april fadein 3.0
-    show vpic
+    show violet
     "Violet sits on a bench outside his school, watching as his classmates exit the gates and into their lives outside of school."
     "Violet forget that each of his classmates lead lives different from his own."
     "Well, probably not too different. Everyone likely shares Violet’s same worries, same minimal aspirations, desires to just make it through life safety, etc."
     "But maybe that girl over there was into some boy band that Violet’s never heard of. Maybe that guy walking with his friends plays piano in his spare time."
     "Maybe the girl walking towards him, Sophia, shared some of his own hobbies and interests."
     "Thinking about what his classmates look forward to in their personal lives makes Violet oddly happy."
-    show vpic at halfleft
+    show violet at halfleft
     show sophia at halfright
     Sophia "Enjoying the warm weather?"
     Violet "Yeah. I’m not in any rush to get home, so I just thought I’d stay here for a while."
     Sophia "Well, I’m probably gonna head out now. Wanna join me?"
     Violet "Alright, sure."
     scene road with fade
-    show vpic at halfleft
+    show violet at halfleft
     show sophia at halfright
     Sophia "How was physics? I thought it was pretty interes—"
     Violet "It was pretty boring."
@@ -453,7 +455,7 @@ label scene4:
     Violet "I’m tired of this shit! I’m tired. Maybe I just need to get up and walk around."
 
     scene bgroom with fade
-    show vpic
+    show violet
     Violet "These things are getting kinda dusty..."
     Violet "Grandpa took pretty good care of these. Compared to me, he probably took way better care of these figurines when he was 18."
     "COOL DESK STUFF"
@@ -520,7 +522,7 @@ label scene5:
     "Civilians that didn’t have a job in the government aren’t allowed to own cars. Of course, you can own a car if you are rich enough and know the right people."
     "The DLC claims that this policy was to reduce carbon emissions long-term, but good chunk of the planet isn’t habitable anymore due to climate change. Too little too late."
 
-    show vpic
+    show violet
     "Violet tries to see the positive in being forced to walk everywhere, since he otherwise wouldn’t have the opportunity to slow down and notice the smaller details of his town."
     "That said, the streets aren’t really the safest either. You can’t have it all..."
     "His town changes too often. His younger self would have a hard time trying to navigate 18-year-old Violet’s roads."
@@ -536,8 +538,8 @@ label scene5:
     "He had heard in the news that a bookstore had been burned down in an 'accident' and rebuilt within a little less than a month."
     "The story was oddly inspiring. Is 'that' this store?"
     scene bgbookstore with fade
-    show vpicFlip at halfright
-    show vincent at halfleft
+    show violetFlip at halfright
+    show vincentFlip at halfleft
     Vincent "Hey, Violet!"
     "Vincent waves to Violet from across the room. The store is neatly lined with parallel shelves of new books, each shelf labeled by genre."
     "Unsurprisingly, Vincent was over by the comics. Violet quickly joins him, trying not to let his eyes linger at the romance section."
@@ -737,10 +739,10 @@ label credits:
     hide vincent
     with dissolve
     with Pause(1)
-    show vpic
+    show violet
     with dissolve
     with Pause(6)
-    hide vpic
+    hide violet
     with dissolve
     with Pause(1)
 
