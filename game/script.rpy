@@ -33,7 +33,6 @@ image bgcourtyard = im.Scale("bgcourtyard.jpg", 1280, 720)
 image bgroad = "road.jpg"
 image bgdesk = im.Scale("desk.jpg", 1280, 720)
 image bgbookstore = im.Scale("bookstore.png", 1280, 720)
-image bgfishing = "bgfishing.png" #need to scale, probably also need to scale the dog and fish along with it (might have to do those manually)
 
 # VFX
 image explosion = "explosion.png"
@@ -43,6 +42,16 @@ transform halfleft:
 
 transform halfright:
     xalign 0.85 yalign 1.0
+
+
+screen fish_button:
+    imagebutton:
+       idle "fish.png"
+       hover "dog.png"
+       xalign 0.5
+       yalign 0.5
+       action Function(renpy.call, label="fish_catcher")
+
 
 # Splash screen
 label splashscreen:
@@ -57,13 +66,12 @@ label splashscreen:
 
     return
 
-# Start of game
+# Start of game, can change for debugging purposes
 label start:
     jump scene1
 
 # SCENE 1: CLASSROOM
 label scene1:
-    jump credits #debugging
     scene black
     play music yourname fadein 3.0
     "Violet is dreaming. His dreams were usually of nothing important—just human, mundane events."
@@ -563,6 +571,7 @@ label scene4:
     Violet "Grandpa took pretty good care of these. Compared to me, he probably took way better care of these figurines when he was 18."
 
     "COOL DESK STUFF"
+    show screen fish_button
 
     Violet "God, I’ve had these for so long..."
     Violet "As someone who bullies Vincent for having his interests, I’m a damn hypocrite."
@@ -573,6 +582,8 @@ label scene4:
     Violet "I’m so fucking weird..."
 
     "..."
+
+    hide screen fish_button
 
     Violet "God, why do I feel so uncomfortable? What exactly is wrong with owning these?"
     Violet "Why would I rather die than have anyone from school see any of this shit?"

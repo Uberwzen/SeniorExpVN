@@ -1,5 +1,6 @@
 # Reference: http://www.renpy.org/doc/html/udd.html
 
+
 init python:
     import random
     import pygame
@@ -244,12 +245,12 @@ init python:
 
             return delta
         # updateRate
-    # FishCatcherGame
 
+# FishCatcherGame
 screen FishCatcher:
     default fcg = FishCatcherGame()
 
-    add bgfishing
+    add "bgfishing.png"
 
     add fcg
 
