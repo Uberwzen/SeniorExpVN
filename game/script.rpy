@@ -33,7 +33,7 @@ image bgcourtyard = im.Scale("bgcourtyard.jpg", 1280, 720)
 image bgroad = "road.jpg"
 image bgdesk = im.Scale("desk.jpg", 1280, 720)
 image bgbookstore = im.Scale("bookstore.png", 1280, 720)
-image bgfishing = "bgfishing.png" #need to scale
+image bgfishing = "bgfishing.png" #need to scale, probably also need to scale the dog and fish along with it (might have to do those manually)
 
 # VFX
 image explosion = "explosion.png"
@@ -63,6 +63,7 @@ label start:
 
 # SCENE 1: CLASSROOM
 label scene1:
+    jump credits #debugging
     scene black
     play music yourname fadein 3.0
     "Violet is dreaming. His dreams were usually of nothing important—just human, mundane events."
@@ -869,42 +870,43 @@ label scene5:
 
 
 label credits:
-    play music konosuba fadein 3.0
     image cred = Text(credits_s, text_align=0.5)
-    image theend = Text("{size=80}The End", text_align=0.5)
+    image end = Text("{size=80}The End", text_align=0.5)
     image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5)
 
-    $ credits_speed = 30 #scrolling speed in seconds
+    play music konosuba fadein 3.0
+
+    $ credits_speed = 25 #scrolling speed in seconds
 
     scene black
     show cred at Move((0.5, 5.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
 
-    show theend:
+    show end:
         yanchor 0.5 ypos 0.5
         xanchor 0.5 xpos 0.5
     with dissolve
-    with Pause(2)
-    hide theend
+    with Pause(4.5)
+    hide end
     with dissolve
     with Pause(credits_speed - 5)
 
     show sophia
     with dissolve
-    with Pause(2)
+    with Pause(3)
     hide sophia
     with dissolve
     with Pause(1)
 
     show vincent
     with dissolve
-    with Pause(2)
+    with Pause(3)
     hide vincent
     with dissolve
     with Pause(1)
 
     show violet
     with dissolve
-    with Pause(2)
+    with Pause(3)
     hide violet
     with dissolve
     with Pause(1)
@@ -913,7 +915,7 @@ label credits:
         yanchor 0.5 ypos 0.5
         xanchor 0.5 xpos 0.5
     with dissolve
-    with Pause(8)
+    with Pause(6)
     hide thanks
     with dissolve
     stop music fadeout 3.0

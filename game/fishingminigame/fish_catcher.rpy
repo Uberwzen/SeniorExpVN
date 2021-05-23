@@ -264,9 +264,5 @@ label fish_catcher:
     $ quick_menu = True
     window show
 
-    return
-
-
-    # python:
-    #     ui.add( FishCatcherGame() )
-    #     ui.interact( suppress_overlay=True, suppress_underlay=True )
+    #return
+    # Have to jump back to whereever it was called from
