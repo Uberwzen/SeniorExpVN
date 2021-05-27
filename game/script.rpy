@@ -627,7 +627,7 @@ label scene4:
         Violet "{i}I can’t tell if that’s good or bad.{/i}"
 
         stop music fadeout 3.0
-        scene black
+        scene black with fade
         with Pause(3)
         jump credits
 
@@ -635,7 +635,7 @@ label scene4:
         menu:
             "It’s getting late, I should probably get going.":
                 stop music fadeout 3.0
-                scene black
+                scene black with fade
                 with Pause(3)
                 jump scene5
 
@@ -643,7 +643,7 @@ label scene4:
                 "{i}Sorry, Vincent. Maybe next time.{/i}"
 
                 stop music fadeout 3.0
-                scene black
+                scene black with fade
                 with Pause(3)
                 jump credits
 
