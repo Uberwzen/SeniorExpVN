@@ -376,7 +376,6 @@ label scene3:
     "The piercing sound of magazines being emptied makes it impossible for Violet to think straight."
 
     stop sound
-    play sound gunshot1
 
     "There’s always a window of time. At the moment, Violet and Sophia are safe from being hit in the crossfire."
     "But this won’t last long. Once they miss that window, it’s near-impossible to escape."
@@ -437,6 +436,7 @@ label scene3:
             "Everything goes black."
             "..."
 
+            stop sound
             stop music fadeout 3.0
             with Pause(3)
             jump credits
@@ -462,6 +462,8 @@ label scene3:
 
             Violet "{i}Why am I always the person leaning on someone else...{/i}"
             Violet "{i}I need to learn to hold my own sometimes...{/i}"
+
+            stop sound
 
             "They reached a street that Violet vaguely recognizes."
             "Everything on this street is run down and abandoned, which ironically, makes it the safest."
@@ -571,8 +573,6 @@ label scene4:
     Violet "Grandpa took pretty good care of these. Compared to me, he probably took way better care of these figurines when he was 18."
 
     "COOL DESK STUFF"
-    # TODO: Change to button image to a game controller, don't have text - static screen with a proceed button to progress game
-    show screen fish_button
 
     Violet "God, I’ve had these for so long..."
     Violet "As someone who bullies Vincent for having his interests, I’m a damn hypocrite."
@@ -584,10 +584,19 @@ label scene4:
 
     "..."
 
+    hide violet
+
+    "Violet rummages around his stuff some more."
+
+    Violet "Oh shit, this game! I thought I gave this away to Vincent's sister. Should I play a round, for old time's sake?"
+
+    show screen fish_button
+
+    "Click the game controller to play the minigame. Click anywhere else or press space to proceed."
+
     hide screen fish_button
 
-    # TODO: Why changing from normal to italics? Maybe all italics?
-    Violet "God, why do I feel so uncomfortable? What exactly is wrong with owning these?"
+    Violet "God, why do I feel so uncomfortable right now? What exactly is wrong with owning these?"
     Violet "Why would I rather die than have anyone from school see any of this shit?"
     Violet "{i}This all feels... meaningless. It’s just pathetic. Seriously.{/i}"
     Violet "{i}I don’t even think I have a future and I’m still worried about my classmates finding out that I have this collection.{/i}"
