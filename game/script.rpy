@@ -571,6 +571,7 @@ label scene4:
     Violet "Grandpa took pretty good care of these. Compared to me, he probably took way better care of these figurines when he was 18."
 
     "COOL DESK STUFF"
+    # TODO: Change to button image to a game controller, don't have text - static screen with a proceed button to progress game
     show screen fish_button
 
     Violet "God, I’ve had these for so long..."
@@ -585,6 +586,7 @@ label scene4:
 
     hide screen fish_button
 
+    # TODO: Why changing from normal to italics? Maybe all italics?
     Violet "God, why do I feel so uncomfortable? What exactly is wrong with owning these?"
     Violet "Why would I rather die than have anyone from school see any of this shit?"
     Violet "{i}This all feels... meaningless. It’s just pathetic. Seriously.{/i}"
@@ -791,7 +793,7 @@ label scene5:
     Vincent "Are you...?"
     Unknown "Yeah, I’m a part of your unnamed and pitiful resistance force. Pleased to be making your acquaintance."
 
-    # ?Declare character for Resistance Member, give both Unknown and Resistance Member the same color?
+    # TODO: Declare character for Resistance Member, give both Unknown and Resistance Member the same color
     "Resistance Member" "Despite our unfortunate lifestyle, we rest pretty well at night knowing that we’re doing {i}something{/i}. Plus you meet some pretty good people too."
     "Resistance Member" "So, are you two interested?"
 
@@ -935,6 +937,7 @@ label credits:
 
 
 init python:
+    # TODO: Create separate credits button on main menu for further credits
     credits = ('Writing', 'Nithya Sastry'), ('Art', 'Felicia Quan'), ('Programming', 'Matthew Ding'), ('Programming', 'Jason Liang'), ('Programming', 'William Zeng')
     credits_s = "{size=80}Dreaming of a Violet Sunset\n\n"
     c1 = ''
