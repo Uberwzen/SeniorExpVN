@@ -30,7 +30,7 @@ define config.version = "1.0"
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
-In a futuristic world, follow Violet as he, beset by doubt and uncertainty, navigates a day in his life.
+Follow Violet, beset by doubt and uncertainty, as he navigates high school life in a futuristic world.
 
 A visual novel created by five Westford Academy students. Completed as part of the Spring 2021 Senior Experience.
 """)
