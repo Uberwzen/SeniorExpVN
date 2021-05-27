@@ -46,8 +46,8 @@ transform halfright:
 
 screen fish_button:
     imagebutton:
-       idle "fish.png"
-       hover "dog.png"
+       idle "btn_minigame.png"
+       hover "btn_minigame_highlighted.png"
        xalign 0.5
        yalign 0.5
        action Function(renpy.call, label="fish_catcher")
