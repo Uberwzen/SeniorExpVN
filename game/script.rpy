@@ -73,7 +73,7 @@ label start:
 # SCENE 1: CLASSROOM
 label scene1:
     scene black
-    play music yourname fadein 3.0
+    play music clair_de_lune_slowed fadein 3.0
     "Violet is dreaming. His dreams were usually of nothing important—just human, mundane events."
     "Listening to music in his room, walking the streets of his old neighborhood, and other things like that. Pretty normal."
     "These types of dreams may sound boring, but the physical and emotional sensations that hit Violet during these dreams makes him want to hold on to these imagined experiences for as long as he could."
@@ -94,6 +94,7 @@ label scene1:
 
     play sound whack
     "(SMACK)" with vpunch
+    stop music
 
     Violet "OW!"
     "Yup, that was Vincent’s voice, and unfortunately, his hand as well. Across the back of Violet’s head."
