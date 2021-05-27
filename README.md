@@ -1,2 +1,2 @@
-# SeniorExpVN
-In a futuristic world, follow Violet as he, beset by doubt and uncertainty, navigates a day in his life.
+# Senior Experience Visual Novel
+Follow Violet, beset by doubt and uncertainty, as he navigates high school life in a futuristic world.
