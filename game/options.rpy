@@ -47,8 +47,17 @@ Music (in order of appearance):
 \nSora Amamiya, Rie Takahashi, Ai Kayano - My Home Town
 
 
-Student #1 art:
-Nozoni Osaka
+Background Images (in order of appearance):
+\nClassroom - https://wallpapercave.com/w/wp6517777
+\nCourtyard - https://wallpapercave.com/w/wp3738652
+\nRoad - Arseniy Chebynkin (https://www.pixiv.net/en/artworks/39578544)
+\nBedroom - Laynesis Ling (https://www.artstation.com/artwork/Bm3Kxk)
+\nBookstore - https://wallpapercave.com/w/wp6961359
+
+
+Other Images:
+\nStudent #1 art - Nozoni Osaka
+\n
 """)
 
 
