@@ -22,7 +22,7 @@ image teacherFlip = im.Flip(im.Scale("teacher.png", 649, 550), horizontal = True
 image teacher_annoyed = im.Scale("teacher_annoyed.png", 649, 550)
 image teacher_annoyedFlip = im.Flip(im.Scale("teacher_annoyed.png", 649, 550), horizontal = True)
 image sophia = im.Scale("sophia.png", 288, 600)
-image student1 = im.Scale("schoolboy.png", 288, 600)
+image student1 = im.Flip(im.Scale("schoolboy.png", 288, 600), horizontal = True)
 image vincent = im.Scale("vincent.png", 361, 600)
 image vincentFlip = im.Flip(im.Scale("vincent.png", 361, 600), horizontal = True)
 
