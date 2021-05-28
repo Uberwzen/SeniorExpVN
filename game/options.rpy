@@ -33,6 +33,22 @@ define gui.about = _p("""
 Follow Violet, beset by doubt and uncertainty, as he navigates high school life in a futuristic world.
 
 A visual novel created by five Westford Academy students. Completed as part of the Spring 2021 Senior Experience.
+
+Music (in order of appearance):
+Machico - 1 Milli Symphony
+Claude Dubussy - Clair de Lune
+silly
+RADWIMPS - Itomori High School
+Masaru Yokohama - Watashi no Uso
+missionimpossible
+Erik Satie - Gymnopedie No. 1
+RADWIMPS - Theme of Mitsuha
+RADWIMPS - Katwaredoki
+Sora Amamiya, Rie Takahashi, Ai Kayano - My Home Town
+
+
+Student #1 art:
+Nozoni Osaka
 """)
 
 
