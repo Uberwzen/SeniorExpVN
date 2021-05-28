@@ -10,6 +10,7 @@ define Student1 = Character("Student #1", who_color = "00FFF4")
 define Student2 = Character("Student #2", who_color = "1DFF00")
 define Sophia = Character("Sophia", who_color = "FFC2FF")
 
+
 # Default variable values
 default library = True
 
@@ -273,7 +274,7 @@ label scene2:
     "Violet just wanted to make himself feel better. There’s nothing wrong with that, right? Why does he always have to feel so uncomfortable?"
 
     hide student1
-    show teacher_annoyedFlip at halfleft
+    show teacher_annoyed at halfleft
 
     Teacher "Class, settle down."
     Violet "{i}At least after today, he’ll learn how to hold his tongue. And as expected, it always ends in...{/i}"
