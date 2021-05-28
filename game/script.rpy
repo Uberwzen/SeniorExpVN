@@ -16,11 +16,11 @@ default library = True
 # Character images
 image violet = im.Scale("violet.png", 300, 600)
 image violetFlip = im.Flip(im.Scale("violet.png", 300, 600), horizontal = True)
-
-image teacher = im.Scale("teacher.png", 550, 550)
-image teacherFlip = im.Flip(im.Scale("teacher.png", 550, 550), horizontal = True)
+image teacher = im.Scale("teacher.png", 649, 550)
+image teacherFlip = im.Flip(im.Scale("teacher.png", 649, 550), horizontal = True)
+image teacher_annoyed = im.Scale("teacher_annoyed.png", 649, 550)
+image teacher_annoyedFlip = im.Flip(im.Scale("teacher_annoyed.png", 649, 550), horizontal = True)
 image sophia = im.Scale("sophia.png", 288, 600)
-
 image student1 = im.Scale("schoolboy.png", 350, 600)
 image student2 = im.Scale("schoolgirl.png", 350, 600) # Don't have to show, can just do "Someone from the back" with no picture
 image vincent = im.Scale("vincent.png", 361, 600)
@@ -40,6 +40,7 @@ image white = "#ffffff"
 # VFX
 image explosion = "explosion.png"
 
+# Character positions
 transform halfleft:
     xalign 0.15 yalign 1.0
 
@@ -184,6 +185,7 @@ label scene1:
     Vincent "Alright, talk soon?"
     Violet "Yeah, I’ll see you later..."
 
+    stop sound
     scene black
     with Pause(3)
     jump scene2
@@ -238,12 +240,15 @@ label scene2:
 
     "(Students whisper amongst themselves)"
 
+    hide teacherFlip
+    show teacher_annoyedFlip at halfright
+
     Teacher "Now, where did you learn that from?"
     Teacher "We’ve always taught you that that the Department of Life and Charity cares for its citizens!"
     Student1 "I mean, I can think for myself, right?"
     Student1 "It doesn’t take much to see how poverty was basically an excuse used to increase the military’s power."
 
-    hide teacherFlip
+    hide teacher_annoyedFlip
     show student2 at halfright
 
     Student2 "Hey, relax."
@@ -271,7 +276,7 @@ label scene2:
     "Violet just wanted to make himself feel better. There’s nothing wrong with that, right? Why does he always have to feel so uncomfortable?"
 
     hide student1
-    show teacher at halfleft
+    show teacher_annoyedFlip at halfleft
 
     Teacher "Class, settle down."
     Violet "{i}At least after today, he’ll learn how to hold his tongue. And as expected, it always ends in...{/i}"
