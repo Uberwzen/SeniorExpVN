@@ -29,7 +29,7 @@ image vincentFlip = im.Flip(im.Scale("vincent.png", 361, 600), horizontal = True
 image mysteryman = im.Scale("mysteryman.png", 550, 550)
 
 # Backgrounds
-image bgroom = "bgroom.png"
+image bgroom = im.Scale("bgroom.png", 1280, 720)
 image bgclassroom = "bgclassroom.jpg"
 image bgcourtyard = im.Scale("bgcourtyard.jpg", 1280, 720)
 image bgroad = "road.jpg"
