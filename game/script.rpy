@@ -17,14 +17,28 @@ default library = True
 # Character images
 image violet = im.Scale("violet.png", 300, 600)
 image violetFlip = im.Flip(im.Scale("violet.png", 300, 600), horizontal = True)
+image violet_happy = im.Scale("violet_happy.png", 346, 600)
+image violet_happyFlip = im.Flip(im.Scale("violet_happy.png", 300, 600), horizontal = True)
+
 image teacher = im.Scale("teacher.png", 649, 550)
 image teacherFlip = im.Flip(im.Scale("teacher.png", 649, 550), horizontal = True)
 image teacher_annoyed = im.Scale("teacher_annoyed.png", 649, 550)
 image teacher_annoyedFlip = im.Flip(im.Scale("teacher_annoyed.png", 649, 550), horizontal = True)
+
 image sophia = im.Scale("sophia.png", 288, 600)
+image sophia_happy = im.Scale("sophia_happy.png", 288, 600)
+image sophia_upset = im.Scale("sophia_upset.png", 288, 600)
+
 image student1 = im.Flip(im.Scale("schoolboy.png", 288, 600), horizontal = True)
+
 image vincent = im.Scale("vincent.png", 361, 600)
 image vincentFlip = im.Flip(im.Scale("vincent.png", 361, 600), horizontal = True)
+image vincent_happy = im.Scale("vincent_happy.png", 361, 600)
+image vincent_happyFlip = im.Flip(im.Scale("vincent_happy.png", 361, 600), horizontal = True)
+image vincent_n_happy = im.Scale("vincent_neutral_happy.png", 361, 600)
+image vincent_n_happyFlip = im.Flip(im.Scale("vincent_neutral_happy.png", 361, 600), horizontal = True)
+image vincent_serious = im.Scale("vincent_serious.png", 361, 600)
+image vincent_seriousFlip = im.Flip(im.Scale("vincent_serious.png", 361, 600), horizontal = True)
 
 image mysteryman = im.Scale("mysteryman.png", 550, 550)
 
