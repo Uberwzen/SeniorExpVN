@@ -1160,7 +1160,6 @@ label credits:
 
 
 init python:
-    # TODO: Create separate credits button on main menu for further credits
     credits = ('Writing', 'Nithya Sastry'), ('Art', 'Felicia Quan'), ('Programming', 'Matthew Ding'), ('Programming', 'Jason Liang'), ('Programming', 'William Zeng')
     credits_s = "{size=80}Dreaming of a Violet Sunset\n\n"
     c1 = ''

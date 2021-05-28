@@ -62,7 +62,7 @@ Other Images:
 
 Example Codes:
 \nFishing Minigame Base Code - Andredron (https://lemmasoft.renai.us/forums/viewtopic.php?p=489693#p489693)
-
+\nScrolling Credits Base Code - DaFool (https://lemmasoft.renai.us/forums/viewtopic.php?t=22481)
 """)
 
 
