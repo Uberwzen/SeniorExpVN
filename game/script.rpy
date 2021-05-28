@@ -22,7 +22,6 @@ image teacher_annoyed = im.Scale("teacher_annoyed.png", 649, 550)
 image teacher_annoyedFlip = im.Flip(im.Scale("teacher_annoyed.png", 649, 550), horizontal = True)
 image sophia = im.Scale("sophia.png", 288, 600)
 image student1 = im.Scale("schoolboy.png", 350, 600)
-image student2 = im.Scale("schoolgirl.png", 350, 600) # Don't have to show, can just do "Someone from the back" with no picture
 image vincent = im.Scale("vincent.png", 361, 600)
 image vincentFlip = im.Flip(im.Scale("vincent.png", 361, 600), horizontal = True)
 
@@ -249,9 +248,8 @@ label scene2:
     Student1 "It doesn’t take much to see how poverty was basically an excuse used to increase the military’s power."
 
     hide teacher_annoyedFlip
-    show student2 at halfright
 
-    Student2 "Hey, relax."
+    Student2 "{i}(From the back){/i} Hey, relax, dude."
     Student1 "What? I’m not saying anything wrong."
     Student1 "Am I seriously the only one who thinks that it’s unacceptable how the government can just send you to die if you’re suddenly not making enough money?"
     Student1 "Who’s stopping them from setting that income threshold higher?"
@@ -260,7 +258,6 @@ label scene2:
 
     "(The class starts speaking louder amongst themselves)"
 
-    hide student2
     show violetFlip at halfright
 
     Violet "{i}We always have to have one smartass huh. I’m sure he thinks he’s real clever.{/i}"
