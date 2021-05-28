@@ -35,12 +35,12 @@ Follow Violet, beset by doubt and uncertainty, as he navigates high school life 
 A visual novel created by five Westford Academy students. Completed as part of the Spring 2021 Senior Experience.
 
 Music (in order of appearance):
-Machico - 1 Milli Symphony
+\nMachico - 1 Milli Symphony
 \nClaude Dubussy - Clair de Lune
-\nsilly
+\nLuigi's Mansion 3 Soundtrack - E. Gadd's Laboratory
 \nRADWIMPS - Itomori High School
 \nMasaru Yokohama - Watashi no Uso
-\nmissionimpossible
+\nLudoWic - DELUSIVE BUNKER
 \nErik Satie - Gymnopedie No. 1
 \nRADWIMPS - Theme of Mitsuha
 \nRADWIMPS - Katwaredoki
