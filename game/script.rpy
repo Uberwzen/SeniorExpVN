@@ -1,13 +1,14 @@
 # Chacter declarations
-define Violet = Character("Violet", who_color="#D38CFD")
-define Unknown = Character("???")
-define Vincent = Character("Vincent", who_color="8CFFBC")
-define Vincent_Unknown = Character("???", who_color="8CFFBC")
-define Teacher = Character("Teacher", who_color="FF2424")
+define Violet = Character("Violet", who_color = "#D38CFD")
+define Resist_Member_Unknown = Character("???", who_color = "008080")
+define Resistance_Member = Character("Resistance Member", who_color = "008080")
+define Vincent = Character("Vincent", who_color = "8CFFBC")
+define Vincent_Unknown = Character("???", who_color = "8CFFBC")
+define Teacher = Character("Teacher", who_color = "FF2424")
 define narrator = Character(None, what_italic=True)
-define Student1 = Character("Student #1", who_color="00FFF4")
-define Student2 = Character("Student #2", who_color="1DFF00")
-define Sophia = Character("Sophia", who_color="FFC2FF")
+define Student1 = Character("Student #1", who_color = "00FFF4")
+define Student2 = Character("Student #2", who_color = "1DFF00")
+define Sophia = Character("Sophia", who_color = "FFC2FF")
 
 # Default variable values
 default library = True
@@ -16,22 +17,23 @@ default library = True
 image violet = im.Scale("violet.png", 300, 600)
 image violetFlip = im.Flip(im.Scale("violet.png", 300, 600), horizontal = True)
 
-image teacher = "teacher.png"
-image sophia = im.Scale("sophia.png", 325, 625)
+image teacher = im.Scale("teacher.png", 550, 550)
+image teacherFlip = im.Flip(im.Scale("teacher.png", 550, 550), horizontal = True)
+image sophia = im.Scale("sophia.png", 288, 600)
 
 image student1 = im.Scale("schoolboy.png", 350, 600)
-image student2 = im.Scale("schoolgirl.png", 350, 600)
-image vincent = im.Scale("vincent.png", 300, 600)
-image vincentFlip = im.Flip(im.Scale("vincent.png", 300, 600), horizontal = True)
+image student2 = im.Scale("schoolgirl.png", 350, 600) # Don't have to show, can just do "Someone from the back" with no picture
+image vincent = im.Scale("vincent.png", 361, 600)
+image vincentFlip = im.Flip(im.Scale("vincent.png", 361, 600), horizontal = True)
 
-image mysteryman = im.Scale("mysteryman.png", 450, 450)
+image mysteryman = im.Scale("mysteryman.png", 550, 550)
 
 # Backgrounds
 image bgroom = "bgroom.png"
 image bgclassroom = "bgclassroom.jpg"
 image bgcourtyard = im.Scale("bgcourtyard.jpg", 1280, 720)
 image bgroad = "road.jpg"
-image bgdesk = im.Scale("desk.jpg", 1280, 720)
+image bgdesk = im.Scale("desk.png", 1280, 720)
 image bgbookstore = im.Scale("bookstore.png", 1280, 720)
 image white = "#ffffff"
 
@@ -197,7 +199,7 @@ label scene2:
     "Luckily, it's history. His teacher makes his students’ lives simultaneously easier and harder by not lecturing on anything that wasn’t on the prior night’s reading."
     "They didn’t really have to pay attention, but they had to last an entire hour in that classroom..."
 
-    show teacher at halfright
+    show teacherFlip at halfright
 
     Teacher "Alright class, today we’ll be studying the Pre-War Era."
     Teacher "You all did the reading last night, so we’ll just be going over that today."
@@ -241,7 +243,7 @@ label scene2:
     Student1 "I mean, I can think for myself, right?"
     Student1 "It doesn’t take much to see how poverty was basically an excuse used to increase the military’s power."
 
-    hide teacher
+    hide teacherFlip
     show student2 at halfright
 
     Student2 "Hey, relax."
@@ -770,21 +772,21 @@ label scene5:
     Violet "Yeah, honest I think I'd really enjoy that."
     Vincent "That sounded oddly enthusiastic. Am I talking to the real Violet?"
     Violet "Uh, yeah. I don’t know, for some reason I was always into the idea of going camping."
-    Unknown "Ah, I remember going camping when I was your age."
+    Resist_Member_Unknown "Ah, I remember going camping when I was your age."
 
     "A middle-aged man browsing the section behind the comics stands turned away from Violet and Vincent, looking through the nonfiction books that filled the shelves."
     "He remains turned away as he spoke to the boys."
 
-    Unknown "My friends and I visited this forest with an open field that gave a beautiful view of the clear night sky."
+    Resist_Member_Unknown "My friends and I visited this forest with an open field that gave a beautiful view of the clear night sky."
     Violet "That sounds wonderful."
-    Unknown "It really was. This is the age where you should be going after experiences like these. Enjoy your youth a bit."
+    Resist_Member_Unknown "It really was. This is the age where you should be going after experiences like these. Enjoy your youth a bit."
     Violet "Easier said than done."
     Vincent "Well, we {i}are{/i} going camping. He’s right, we should enjoy our youth a bit more."
     Violet "Yeah, okay. I think camping will be fun. Sir, what’s this place you went to with your friends?"
-    Unknown "Well, unfortunately I believe that entire acre of land was repurposed for a prison."
+    Resist_Member_Unknown "Well, unfortunately I believe that entire acre of land was repurposed for a prison."
     Vincent "Awe..."
     Vincent "That’s unfortunate."
-    Unknown "Yeah, it was pretty special."
+    Resist_Member_Unknown "Yeah, it was pretty special."
     Violet "Ugh, shit like that makes me hate our government more and more."
     Violet "Sometimes I can get used to it and not care so much, but for some reason small stuff like that makes me angry."
     Vincent "{i}(whispering){/i} Violet, be careful. You don’t know who this is."
@@ -794,32 +796,31 @@ label scene5:
 
     show mysteryman
 
-    Unknown "Don’t worry young man, I share the feeling."
-    Unknown "If you think your childhood was ruined by the DLC, then try talking to the people a generation above you."
-    Unknown "The war went on for the entirety of my teenage years."
+    Resist_Member_Unknown "Don’t worry young man, I share the feeling."
+    Resist_Member_Unknown "If you think your childhood was ruined by the DLC, then try talking to the people a generation above you."
+    Resist_Member_Unknown "The war went on for the entirety of my teenage years."
     Violet "God, that sounds terrible."
-    Unknown "And then we have kids like you waving your fist at the people above you without wanting to make a stand."
+    Resist_Member_Unknown "And then we have kids like you waving your fist at the people above you without wanting to make a stand."
     Violet "Excuse me?"
     Vincent "Damn, that's harsh."
-    Unknown "Ah, sorry, I get a bit passionate about this sort of thing. It’s in the job description I suppose."
+    Resist_Member_Unknown "Ah, sorry, I get a bit passionate about this sort of thing. It’s in the job description I suppose."
     Violet "What do you mean?"
-    Unknown "Well... all I’m saying is that if you actually want to do something about our current political situation, then I could bring you to the people currently involved in that..."
+    Resist_Member_Unknown "Well... all I’m saying is that if you actually want to do something about our current political situation, then I could bring you to the people currently involved in that..."
     Vincent "Are you...?"
-    Unknown "Yeah, I’m a part of your unnamed and pitiful resistance force. Pleased to be making your acquaintance."
+    Resist_Member_Unknown "Yeah, I’m a part of your unnamed and pitiful resistance force. Pleased to be making your acquaintance."
 
-    # TODO: Declare character for Resistance Member, give both Unknown and Resistance Member the same color
-    "Resistance Member" "Despite our unfortunate lifestyle, we rest pretty well at night knowing that we’re doing {i}something{/i}. Plus you meet some pretty good people too."
-    "Resistance Member" "So, are you two interested?"
+    Resistance_Member "Despite our unfortunate lifestyle, we rest pretty well at night knowing that we’re doing {i}something{/i}. Plus you meet some pretty good people too."
+    Resistance_Member "So, are you two interested?"
 
     Violet "God... this is too sudden..."
     Vincent "Violet, I’m still not sure if we can trust him."
 
-    "Resistance Member" "I mean, there’s nothing stopping you from turning me in. I’m the one taking the risk here."
-    "Resistance Member" "Well, I guess there’s not much of a risk. I’ve got ten years of experience and can handle my own pretty well."
+    Resistance_Member "I mean, there’s nothing stopping you from turning me in. I’m the one taking the risk here."
+    Resistance_Member "Well, I guess there’s not much of a risk. I’ve got ten years of experience and can handle my own pretty well."
 
     Vincent "I guess..."
 
-    "Resistance Member" "Hey, there’s absolutely no pressure to join us. I might’ve understated how stressful the lifestyle is, and you might be better off enjoying your normal lives."
+    Resistance_Member "Hey, there’s absolutely no pressure to join us. I might’ve understated how stressful the lifestyle is, and you might be better off enjoying your normal lives."
 
     Violet "It would be nice to not feel so powerless all the time..."
     Violet "Vincent, are you joining them?"
@@ -840,7 +841,7 @@ label scene5:
     Vincent "You can’t blame me for it. I’ve thought about it long enough, weighed the pros and cons, and now I can make a decision as fast as I just did."
     Violet "You make some good points..."
 
-    "Resistance Member" "Again, no pressure."
+    Resistance_Member "Again, no pressure."
 
     "..."
     "..."
@@ -851,7 +852,7 @@ label scene5:
         "Join.":
             Vincent "Dude..."
 
-            "Resistance Member" "Welcome aboard. I can’t promise you’ll come out the other side in one piece. We do what we can."
+            Resistance_Member "Welcome aboard. I can’t promise you’ll come out the other side in one piece. We do what we can."
 
             Violet "I’ll do what I can..."
 
