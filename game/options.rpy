@@ -34,7 +34,7 @@ Follow Violet, beset by doubt and uncertainty, as he navigates high school life 
 
 A visual novel created by five Westford Academy students. Completed as part of the Spring 2021 Senior Experience.
 
-Music (in order of appearance):
+\nMusic (in order of appearance):
 \nMachico - 1 Milli Symphony
 \nClaude Dubussy - Clair de Lune
 \nLuigi's Mansion 3 Soundtrack - E. Gadd's Laboratory
@@ -57,7 +57,12 @@ Background Images (in order of appearance):
 
 Other Images:
 \nStudent #1 art - Nozoni Osaka
-\n
+\nBase game controller icon - Stockio.com
+
+
+Example Codes:
+\nFishing Minigame Base Code - Andredron (https://lemmasoft.renai.us/forums/viewtopic.php?p=489693#p489693)
+
 """)
 
 
