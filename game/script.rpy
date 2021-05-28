@@ -375,7 +375,7 @@ label scene3:
     "Then they hear more people shouting."
     "These shouts sound angry, but Violet could hear that familiar tone of fear buried within their voices."
     "Maybe it is more accurate to say that they were screaming?"
-    "(More gunshots)"
+    "(More gunshots)" with vpunch
     "Violet doesn’t understand why the resistance couldn’t just fight back a little quieter."
     "He often laid awake at night, thinking about the way that those yells sounded way more forced than genuine."
     "Maybe yelling is cathartic for them? Violet just wished that their only hope could at least sound a little braver..."
@@ -440,7 +440,7 @@ label scene3:
             scene white
             $ renpy.pause(2)
 
-            "Violet collapses before he hears the bang."
+            "Violet collapses before he hears the bang." with vpunch
 
             scene black with fade
 
@@ -461,7 +461,7 @@ label scene3:
             Sophia "WE HAVE TO GO!"
             Violet "I’m sorry?"
 
-            "Violet can hear his own heartbeat, almost as loud as the gunshots."
+            "Violet can hear his own heartbeat, almost as loud as the gunshots." with vpunch
 
             Sophia "Good lord—"
 
@@ -920,6 +920,20 @@ label credits:
     hide end
     with dissolve
     with Pause(credits_speed - 5)
+
+    show mysteryman
+    with dissolve
+    with Pause(3)
+    hide mysteryman
+    with dissolve
+    with Pause(1)
+
+    show teacher
+    with dissolve
+    with Pause(3)
+    hide teacher
+    with dissolve
+    with Pause(1)
 
     show sophia
     with dissolve
