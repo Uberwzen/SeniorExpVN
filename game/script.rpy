@@ -33,6 +33,7 @@ image bgcourtyard = im.Scale("bgcourtyard.jpg", 1280, 720)
 image bgroad = "road.jpg"
 image bgdesk = im.Scale("desk.jpg", 1280, 720)
 image bgbookstore = im.Scale("bookstore.png", 1280, 720)
+image white = "#ffffff"
 
 # VFX
 image explosion = "explosion.png"
@@ -412,7 +413,7 @@ label scene3:
             Violet "Just run!"
 
             hide sophia
-            play sound gunshot1
+            play sound gunshot1 loop
 
             "Violet sprints towards the gunfire as it gets louder and louder in his ears. He could feel the sides of his head throbbing."
             "He didn’t know where he was. Violet recognizes his surroundings but he couldn’t think straight enough to navigate these roads."
@@ -430,16 +431,20 @@ label scene3:
 
             Violet "Wait, I’m not—"
 
-            scene black
             play sound gunshot2
+            scene white
+            $ renpy.pause(2)
 
             "Violet collapses before he hears the bang."
+
+            scene black with fade
+
             "Everything goes black."
             "..."
 
             stop sound
             stop music fadeout 3.0
-            with Pause(3)
+            with Pause(2)
             jump credits
 
         "Violet can’t help but freeze up.":
@@ -537,8 +542,7 @@ label scene3:
             Violet "{i} She’s really amazing, huh. {/i}"
 
             stop music fadeout 3.0
-            scene black
-            with Pause(3)
+            scene black with fade
             jump scene4
 
 # SCENE 4: AT HOME
