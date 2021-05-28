@@ -36,15 +36,15 @@ A visual novel created by five Westford Academy students. Completed as part of t
 
 Music (in order of appearance):
 Machico - 1 Milli Symphony
-Claude Dubussy - Clair de Lune
-silly
-RADWIMPS - Itomori High School
-Masaru Yokohama - Watashi no Uso
-missionimpossible
-Erik Satie - Gymnopedie No. 1
-RADWIMPS - Theme of Mitsuha
-RADWIMPS - Katwaredoki
-Sora Amamiya, Rie Takahashi, Ai Kayano - My Home Town
+\nClaude Dubussy - Clair de Lune
+\nsilly
+\nRADWIMPS - Itomori High School
+\nMasaru Yokohama - Watashi no Uso
+\nmissionimpossible
+\nErik Satie - Gymnopedie No. 1
+\nRADWIMPS - Theme of Mitsuha
+\nRADWIMPS - Katwaredoki
+\nSora Amamiya, Rie Takahashi, Ai Kayano - My Home Town
 
 
 Student #1 art:
